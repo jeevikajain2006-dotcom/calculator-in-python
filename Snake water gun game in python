@@ -1,0 +1,38 @@
+#SNAKE WATER GUN
+
+'''                s w g      
+    computer =     0 1 2
+    player  = s 0  D W L
+              w 1  L D W
+              g 2  W L D'''
+import random
+print(" WELCOME TO THE SNAKE WATER GUN GAME 😀😀!!")
+secret = random.randint(0,2)
+print(" 0 FOR SNAKE 🐍  ")
+print(" 1 FOR WATER 💧 ")
+print(" 2 FOR GUN 🔫 ")
+n = int(input(" CHOOSE A NUMBER (0-2) ->  "))
+print(f"\n You choose : {n}")
+print(f"\n computer choose : {secret}")
+if secret == n:
+    print("\n DRAW ! you and wour opponent choose same option ")
+elif( secret == 0 and n ==1 ) or ( secret == 1 and n ==2 ) or ( secret == 2 and n ==0 ):
+    print("\n You Loose !! and computeer wins ")
+    if secret == 0 and n == 1:
+        print("Snake 🐍 drinks water\n")
+    if secret == 1 and n == 2:
+        print("water 💧 rusts gun 🔫\n")
+    else:
+         print("Gun 🔫 shoots Snake  🐍\n")
+ 
+ 
+else:
+    print(f"\nCONGRATULATIONS 🎉🎉 !! you win the game \n ")
+    if n == 0 and secret == 1:
+        print("Snake 🐍 drinks water 💧\n")
+    if n == 1 and secret == 2:
+        print("water 💧 rusts gun 🔫\n")
+    else:
+         print("Gun 🔫 shoots Snake  🐍\n")
+ 
+ 
