@@ -1,0 +1,14 @@
+import random
+print(" WELCOME TO THE GUESS THE NUMBER GAME !!")
+secret = random.randint(1,100)
+attempts = 0
+while True:
+    guess = int(input("ENTER YOUR GUESS(1-100 )"))
+    attempts += 1
+    if guess < secret:
+        print("Too low ! Try again..")
+    elif guess > secret:
+        print("Too high ! Try again..")
+    else:
+        print(f" CONGRATULATIONS !! you gussed it in { attempts} tries..")
+        break
